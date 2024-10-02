@@ -7,6 +7,10 @@ import plotly.express as px
 import seaborn as sns
 import folium
 
+"""
+Not part of the original batomouche, created by Yubo
+"""
+
 tags_transportation = {
     'Bicycle Sharing Docking Station': {"bicycle_rental": "docking_station"},
     'Bus Station': {'public_transport': 'station'},
@@ -41,6 +45,12 @@ coords_places = {
 def count_transport_stations(coords=coords_places,
                              tags=tags_transportation,
                              radius=1000):
+    """
+    checks how many transport stations of types specified by tags_transportation 
+    are in radius 1000 of place specified by coords_places
+    returns dataframe with this data
+    """
+
     # Initialize a dictionary to store the count of each type of station
     data = {key: [] for key in tags.keys()}
 
@@ -70,6 +80,11 @@ def composition_chart_public_transportation(df,
                                             font_name='sans-serif',
                                             font_size=12,
                                             fig_size=(8, 8)):
+    
+    """
+    Visualises then number of trnasportation modes available for places listed
+    """
+
     # Extract the data for the specified place
     data_row = df.loc[place]
 

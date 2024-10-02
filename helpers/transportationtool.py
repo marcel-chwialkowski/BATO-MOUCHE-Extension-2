@@ -21,7 +21,7 @@ def calculate_straight_line_distance(point1, point2):
     distance = geopy.distance.distance(point1, point2).m
     return distance
 
-
+#marcels questions
 def calculate_network_distance_km(network, orig_node, dest_node):
     """Calculate the distance between two nodes in a network in kilometers."""
     try:
@@ -33,7 +33,7 @@ def calculate_network_distance_km(network, orig_node, dest_node):
         print(f"No path between {orig_node} and {dest_node}")
         return None
 
-
+#marcel question: which one do we use?
 def calculate_distance_access_zone(network, zone1_position, zone2_position):
     """
     Calculate the distance between two accessible zones in a network
@@ -123,7 +123,7 @@ def calculate_distanceband_weights_transport(gdf,
 
     return weights_by_id
 
-
+#why is this all based on distance not on time????
 def calculate_distance_node_index(gdf,
                                   network,
                                   idCol="IdINSPIRE",
@@ -135,6 +135,8 @@ def calculate_distance_node_index(gdf,
     Calculate distance band weights for each area in a GeoDataFrame and save to CSV.
     Optimized to compute only upper triangle of the symmetric matrix to reduce computation time.
     """
+
+
     if column_num != 'All':
         gdf = gdf.head(column_num)
     if 'level_0' in gdf.columns:
@@ -166,11 +168,9 @@ def calculate_distance_node_index(gdf,
 
 
 def read_distance_csv(file_path):
-    """
-    读取存储的 CSV 文件并返回一个 DataFrame。
-
-    :param file_path: CSV 文件的路径
-    :return: 从 CSV 文件中读取的 DataFrame
+    """ Reads a stored CSV file and returns a DataFrame.
+    :param file_path: The path to the CSV file
+    :return: The DataFrame read from the CSV file
     """
     return pd.read_csv(file_path)
 

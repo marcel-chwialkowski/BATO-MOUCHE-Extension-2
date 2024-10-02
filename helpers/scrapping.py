@@ -11,6 +11,7 @@ import numpy as np
 from tqdm.auto import tqdm
 
 from pysal.lib import weights
+#import pysal
 from pysal.lib import cg as geometry
 from pysal.model import spreg
 from spreg import OLS
@@ -526,6 +527,7 @@ def get_POI_cat_on_INSPIRE_grid(url: str, city: str = "Paris", reduced_cat=True)
     if reduced_cat:
         osmgdf = get_place_POI(city)
         # je comprend pas le warning  : j'ai projeté en WGS-84.
+        # angielski mordo
         return aggregating_from_dummies_on_grid(pgdf, osmgdf)
     else:
         categories = dict()
