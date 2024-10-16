@@ -150,7 +150,7 @@ def calculate_distance_node_index(gdf,
         for idx2, row2 in gdf.loc[idx:].iterrows():
             if idx != idx2:
                 distance_ = calculate_distance_access_zone(
-                    network, (row[geometryCol].x, row[geometryCol].y), (row2[geometryCol].x, row2[geometryCol].y))
+                    network, (row[geometryCol].y, row[geometryCol].x), (row2[geometryCol].y, row2[geometryCol].x))
                 distance = str(distance_[0]) + ',' + str(distance_[1]) + \
                     ',' + str(distance_[2]) + ',' + str(distance_[3])
             else:
@@ -215,6 +215,35 @@ def transfer_distance_to_weight(dataframe,
     dataframe_copy.iloc[0, 0] = 1.0
 
     return dataframe_copy
+
+def transfer_time_to_weight(dataframe, 
+                            threshold=30):
+    """
+    Transfer times into weight. a subset of functionality of the previous func.
+    """
+
+    max_weight = 10.0
+    normaliser = threshold**2
+    df_copy = dataframe.copy()
+
+    for i in range(df_copy.shape[0]):
+        for j in range(df_copy.shape[1]):
+            if i != j:
+                time = df_copy.iloc[i, j]
+                weight = normaliser / time ** 2 if time <= threshold else 0
+            else:
+                weight = 10.0
+            df_copy.iloc[i, j] = weight
+
+     # Normalize weights and fill diagonal with 1 (self-weight)
+    for id in df_copy.columns:
+        max_weight = max(df_copy[id].values)
+        df_copy[id] = df_copy[id] / max_weight
+        df_copy.at[id, id] = 1.0
+
+    df_copy.iloc[0, 0] = 1.0
+
+    return df_copy
 
 
 def fig_save_folium(map, file_path, file_name, width=1000, height=800, dpi=600):
