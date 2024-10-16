@@ -1,5 +1,6 @@
 data/
-transportation/data_result/
+transportation/figure
+data_result/
 
 **/.DS_Store
 **/.ipynb_checkpoints
