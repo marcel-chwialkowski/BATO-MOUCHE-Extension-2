@@ -1,6 +1,6 @@
-# Computer Sciences Research Project
+# Lab Research Project
 
-## Project: Analysis of city composition based on basic amenities including public transport
+## Project: Accessibility analysis of Paris based on available amenities 
 
 Please find the project report in the following [file](https://drive.google.com/file/d/1H4NBf4-vHgr995r3bvlePJXWFkzVVDNR/view?usp=sharing)
 
