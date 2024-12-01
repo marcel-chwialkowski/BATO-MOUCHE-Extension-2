@@ -16,11 +16,6 @@ import time
 import os
 import json
 
-"""
-this file is in essence very similar to what yubo did, i will just exclude the stuff that i find useless.
-it will be easier for me to wrap my head around it.
-"""
-
 def calculate_straight_line_distance(point1, point2):
     """Calculate the straight line distance between two points in kilometers."""
     distance = geopy.distance.distance(point1, point2).m
