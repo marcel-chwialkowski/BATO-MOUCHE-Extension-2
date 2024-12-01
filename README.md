@@ -27,7 +27,9 @@ We provide analysis results for 3 regions: Paris, Paris with Petite Couronne, Pe
     1. 2SFCA_general_analysis.ipynb - notebook with guide on how to compute 2SFCA scores for an area
     2.  Clustering.ipynb - Clustering which we did on the pcparis.gpkg dataset
     3.  Regression.ipynb - Regression which we did on the pcparis.gpkg dataset
-   The above files work for other geopackages as well. Moreover, the notebooks on data extraction for Paris, Paris with Petite Couronne and Petite Couronne are in this notebook.
+    4.  SpatialRegression.ipynb - recreation of spatial regression done by the BATO MOUCHE team.
+       
+The above files work for other geopackages as well. Moreover, the notebooks on data extraction for Paris, Paris with Petite Couronne and Petite Couronne are in this notebook.
 
 
 ## More Information
