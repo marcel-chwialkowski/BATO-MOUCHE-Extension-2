@@ -12,3 +12,6 @@ data_result/
 # Ignore cache directories in any directory
 **/cache/
 batomouche/
+
+*.png
+*.jpg
