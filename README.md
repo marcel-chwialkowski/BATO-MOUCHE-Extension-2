@@ -18,7 +18,7 @@ Here is where the data used for this project can be found.
 6.  **GTFS file for IDFM** - Required for calculating travel times. Available [here](https://data.iledefrance-mobilites.fr/explore/dataset/offre-horaires-tc-gtfs-idfm/information/) after registration, but free of charge.
 
  ## Intermediate results
-We provide analysis results for 3 regions: Paris, Paris with Petite Couronne, Petite Couronne. They can be found [here](haha). 
+We provide analysis results for 3 regions: Paris, Paris with Petite Couronne, Petite Couronne. They can be found [here](https://drive.google.com/drive/u/1/folders/1TutJX84GgBQe1-8TYyga9kIER5iEqLLb). 
 
 ## Organisation of the repo
 1. helpers - contains helper functions for data extractions, calculating the 2SFCA scores and visualisations. Supplied by the BATO-MOUCHE project, extended and modified for better performance by us.
