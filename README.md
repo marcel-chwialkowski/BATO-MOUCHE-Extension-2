@@ -41,7 +41,7 @@ The file requirements.txt contains the libraries necessary to run this project. 
 ```bash
 pip install -r requirements.txt
 ```
-To ensure that the *r5.py* library is correctly installed, additionally follow the steps listed [here][https://r5py.readthedocs.io/en/stable/user-guide/installation/installation.html]
+To ensure that the *r5.py* library is correctly installed, additionally follow the steps listed [here](https://r5py.readthedocs.io/en/stable/user-guide/installation/installation.html)
 
 ## More Information
 
