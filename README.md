@@ -28,13 +28,24 @@ We provide analysis results for 3 regions: Paris, Paris with Petite Couronne, Pe
     2.  Clustering.ipynb - Clustering which we did on the pcparis.gpkg dataset
     3.  Regression.ipynb - Regression which we did on the pcparis.gpkg dataset
     4.  SpatialRegression.ipynb - recreation of spatial regression done by the BATO MOUCHE team.
+4. requirements.txt - used for installing libraries necessary to run this project.
        
 The above files work for other geopackages as well. Moreover, the notebooks on data extraction for Paris, Paris with Petite Couronne and Petite Couronne are in this notebook.
 
+## Setting up the repository
+In order to run the notebooks, create a 'data' folder and put the required datasets there. Data required to run the analyses is specified within the *2SFCA_General_Analysis* notebook. 
+
+## Required installs
+
+The file requirements.txt contains the libraries necessary to run this project. We recommend setting up a python virtual environment for the project, and within it running:
+```bash
+pip install -r requirements.txt
+```
+To ensure that the *r5.py* library is correctly installed, additionally follow the steps listed [here][https://r5py.readthedocs.io/en/stable/user-guide/installation/installation.html]
 
 ## More Information
 
-For more details on resources and dataset description. Please check the [README.md](https://github.com/LeoMaurice/BATO-MOUCHE-Stat-App/blob/main/README.md) file.
+For more details on resources and dataset description. Please check this [README.md](https://github.com/LeoMaurice/BATO-MOUCHE-Stat-App/blob/main/README.md) file.
 
 ## References:
 - **Moreno, Carlos** (2016). *La ville du quart d'heure: pour un nouveau chrono-urbanisme*. La Tribune, 5, May.
